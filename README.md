@@ -23,6 +23,11 @@ Proyecto backend para la materia **Bases de Datos 2 (UNLP)**, desarrollado en **
 
 ### Instrucciones
 
-1. **Levantar la base de datos MySQL en segundo plano:**
+**Levantar la base de datos MySQL en segundo plano:**
    ```bash
    docker compose run --rm --build app
+
+### Optimización con `.dockerignore`
+
+El proyecto incluye un archivo `.dockerignore` en la raíz para excluir directorios temporales (`/target`), configuraciones de IDEs (`.idea/`, `.classpath`) y archivos de Git. Esto reduce el tamaño del contexto enviado al daemon de Docker y acelera la construcción de las imágenes.
+ 

@@ -1,0 +1,38 @@
+# Maven y compilación local
+target/
+*.jar
+*.war
+*.ear
+*.rar
+
+# Configuraciones e índices de IDEs
+.idea/
+*.iml
+*.ipr
+*.iws
+.eclipse/
+.classpath
+.project
+.settings/
+.vscode/
+*.swp
+*~
+
+# Logs y bases de datos locales
+*.log
+*.sqlite
+
+# Git y CI
+.git/
+.gitignore
+.github/
+
+# Archivos de documentación y Docker locales
+Dockerfile*
+docker-compose*.yml
+README*.md
+.dockerignore
+
+# Sistema operativo
+.DS_Store
+Thumbs.db
