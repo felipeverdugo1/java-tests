@@ -1,0 +1,28 @@
+
+services:
+  # Base de datos MySQL con las credenciales de tu HibernateConfiguration
+  mysql-db:
+    image: mysql:5.7
+    container_name: mysql-vax
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: admin
+      MYSQL_DATABASE: grupo12
+      MYSQL_USER: admin
+      MYSQL_PASSWORD: admin
+    ports:
+      - "3306:3306"
+    volumes:
+      - mysql-data:/var/lib/mysql
+
+  # App / Ejecutor de Tests
+  app:
+    build: .
+    container_name: bd2-2022-app
+    depends_on:
+      - mysql-db
+    environment:
+      - MYSQL_HOST=mysql-db
+
+volumes:
+  mysql-data:
